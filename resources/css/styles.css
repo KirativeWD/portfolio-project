@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poiret+One&display=swap');
+
+/* ========================================
+Table of Contents
+===========================================
+
+* 1. ROOT VARABLES
+* 2. RESET VALUES
+* 3. BODY && COMPOSITION
+* 4. UTILITIES
+
+===== BEGIN PAGE SPECIFIC =====
+
+* 5. HOME
+* 6.
+* 7.
+* 8.
+* 9. MEDIA QUERIES
+
+===========================================
+======================================== */
+
+/* ====================[1]==================== */
+/* ===== ROOT VARIABLES ===== */
+
+:root {
+
+    /* COLORS */
+    --clr-accent-green: hsl(112 19% 57%);
+    --clr-accent-gray: hsl(0 0% 25%);
+    --clr-neutral-tan: hsl(48 24% 84%);
+    --clr-neutral-white: hsl(0, 0%, 86%);
+
+    /* TYPOGRAPHY */
+    /* FONT FAMILY */
+    --ff-title: 'Abril Fatface', cursive;
+    --ff-primary: 'Poiret One', sans-serif;
+
+    /* FONT WEIGHT */
+    --fw-regular: 400;
+    --fw-semibold: 600;
+
+    /* FONT SIZE */
+    --fs-title: clamp(4.5rem, 9vw, 8rem);
+    --fs-heading: clamp(3rem, 8vw, 5rem);
+    --fs-subtitle: clamp(1.55rem, 3vw, 3rem);
+    --fs-reg: clamp(1.45rem, 2vw, 2.15rem);
+    --fs-small: clamp(1.15rem, 2vw, 1.75rem);
+
+    /* SPACING */
+    --space-1: 1rem;
+}
+
+
+
+/* ====================[2]==================== */
+/* ===== RESET VALUES ===== */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+  
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ====================[3]==================== */
+/* ===== BODY && COMPOSITION ===== */
+
+body {
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-semibold);
+    background-color: var(--clr-neutral-tan);
+    color: var(--clr-accent-gray);
+    font-size: var(--fs-reg);
+    margin: 0 1.15rem;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+
+.grid-cta {
+    display: grid;
+    gap: var(--space-1);
+}
+
+.flex-cta {
+    display: flex;
+    gap: var(--space-1);
+    flex-wrap: wrap;
+}
+
+.pos-rel {
+    position: relative;
+}
+
+.pos-abs {
+    position: absolute;
+}
+
+.center-align {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.full-screen {
+    min-height: 100vh;
+}
+
+/* ====================[4]==================== */
+/* ===== UTILITIES ===== */
+
+/* TYPOGRAPHY */
+/* FONT FAMILY */
+.ff-secondary {
+    font-family: var(--ff-title);
+    font-weight: var(--fw-regular);
+}
+
+/* FONT SIZE */
+
+.fs-xlg {
+    font-size: var(--fs-title);
+}
+
+.fs-lg {
+    font-size: var(--fs-heading);
+}
+
+.fs-md {
+    font-size: var(--fs-subtitle);
+}
+
+.fs-sm {
+    font-size: var(--fs-small);
+}
+
+.txt-caps {
+    text-transform: uppercase;
+}
+
+/* TEXT ALIGN */
+
+.txt-center {
+    text-align: center;
+}
+
+/* COLORS */
+
+.clr-accent-green {
+    color: var(--clr-accent-green);
+}
+
+a.clr-accent-gray:is(:hover, :focus) {
+    text-decoration: none;
+}
+
+.clr-accent-gray {
+    color: var(--clr-accent-gray);
+}
+
+.clr-neutral-tan {
+    color: var(--clr-neutral-tan);
+}
+
+.clr-neutral-white {
+    color: var(--clr-neutral-white);
+}
+
+/* BACKGROUND COLORS */
+.bg-clr-accent-green {
+    background: var(--clr-accent-green);
+}
+
+.bg-clr-accent-gray {
+    background: var(--clr-accent-gray);
+}
+
+.bg-clr-neutral-tan {
+    background: var(--clr-neutral-tan);
+}
+
+/* ====================[5]==================== */
+/* ===== HOME ===== */
+
+/* BUTTONS */
+
+.btn-cta {
+    justify-content: center;
+    margin: 0.5rem;
+}
+
+.flex-cta form {
+    width: 100%;
+    max-width: 17rem;
+    margin-bottom: 0.5rem;
+}
+
+button {
+    border: solid var(--clr-accent-green);
+    background: var(--clr-accent-green);
+    color: var(--clr-neutral-tan);
+    box-shadow: 6px 6px var(--clr-accent-gray);
+    padding: 0.5rem;
+    width: 100%;
+    font-size: 1.25rem;
+}
+
+/* VERSE */
+.verse__cta {
+    width: fit-content;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+
+.verse {
+    text-align: right;
+    margin-top: 1rem;
+}
+
+/* ====================[]==================== */
+/* ===== ABOUT ME ===== */
+
+body.about {
+    margin: 0;
+}
+
+section.am {
+    padding: 5.25rem 1.15rem 2.5rem;
+}
+
+/* ABSOLUTE TAG */
+
+.tag {
+    width: 100%;
+    max-width: 19rem;
+    top: 5rem;
+    left: 0;
+    padding: 0.5rem 2rem;
+}
+
+/* MISSION STATEMENT */
+
+#mission {
+    z-index: -2;
+}
+
+#mission p:not(:last-child) {
+    color: hsl(48 24% 84% / 0.2);
+    z-index: -1;
+    display: none;
+}
+
+.integrity {
+    top: 3rem;
+    right: 26%;
+}
+
+.compassion {
+    top: 16rem;
+    right: 12%;
+}
+
+.excellence {
+    top: 30rem;
+    right: 3%;
+}
+
+div.ms {
+    gap: 2rem;
+    margin-top: 2.5rem;
+    flex-direction: column;
+}
+
+/* ====================[7]==================== */
+/* ===== ANIMATIONS && JS TRANSITIONS ===== */
+
+/* === FADE IN === */
+
+.fadeIn {
+    opacity: 0;
+    animation: fadeIn 500ms linear forwards;
+}
+
+@keyframes fadeIn {
+    100% {opacity: 1;}
+}
+
+.scrollFade {
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+.fadeActive {
+    opacity: 1;
+}
+
+/* === TAG TRANSITION === */
+
+.tag {
+    transform: translateX(-100%);
+    transition: transform 700ms ease;
+}
+
+.tagActive {
+    transform: translateX(0);
+}
+
+
+/* ====================[7]==================== */
+/* ===== MEDIA QUERIES ===== */
+
+/* 720 PX */
+@media (min-width: 45em) {
+
+    /* BODY */
+    body {
+        margin: 0 4rem;
+    }
+
+    /* HOME PAGE */
+
+    body.home {
+        text-align: left;
+    }
+
+    .btn-cta {
+        justify-content: flex-start;
+        margin: 0.5rem 0;
+    }
+
+    .verse__cta {
+        margin: 0;
+    }
+
+    /* ABOUT ME */
+
+    section.am {
+        padding: 5.25rem 4rem 3.5rem;
+    }
+
+    /* ABOUT ME
+    * MISSION STATEMENT */
+    p.ms {
+        max-width: 40ch;
+    }
+}
+
+/* 1024 PX */
+@media (min-width: 64em) {
+
+    /* BODY */
+    body {
+        margin: 0 10rem;
+    }
+
+    /* HOME PAGE */
+    /* BUTTONS */
+    .btn {
+        cursor: pointer;
+        border-color: var(--clr-accent-green);
+        color: var(--clr-accent-gray);
+        box-shadow: none;
+        background: transparent;
+        transition: box-shadow 500ms ease,
+                    color 500ms ease,
+                    background-color 500ms ease;
+    }
+
+    .btn:is(:hover, :focus) {
+        color: var(--clr-neutral-tan);
+        background-color: var(--clr-accent-green);
+        box-shadow: 6px 6px var(--clr-accent-gray);
+    }
+
+    .verse__cta {
+        margin: 0.5rem 0 0;
+    }
+
+    /* ABOUT ME */
+    
+    section.am {
+        padding: 5.25rem 10rem 5.5rem;
+    }
+
+    #mission p:not(:last-child) {
+        display: block;
+    }
+
+    /* ABOUT ME
+    * ABSOLUTE TAG */
+    .tag,
+    .tag1 {
+        max-width: 20rem;
+    }
+
+    /* ABOUT ME
+    * MISSION STATEMENT */
+    div.ms {
+        margin-top: 3rem;
+        gap: 4rem;
+    }
+}
+
+/* ====================[8]==================== */
+
+/* ====================[9]==================== */
+
+/* ====================[10]==================== */
