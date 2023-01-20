@@ -262,13 +262,11 @@ a.clr-accent-gray:is(:hover, :focus) {
     margin: 0.5rem;
 }
 
-.flex-cta form {
+.btn {
     width: 100%;
+    text-align: center;
     max-width: 17rem;
     margin-bottom: 0.5rem;
-}
-
-button {
     border: solid var(--clr-accent-green);
     background: var(--clr-accent-green);
     color: var(--clr-neutral-tan);
@@ -276,6 +274,7 @@ button {
     padding: 0.5rem;
     width: 100%;
     font-size: 1.25rem;
+    text-decoration: none;
 }
 
 /* VERSE */
