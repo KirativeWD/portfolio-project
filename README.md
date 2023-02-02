@@ -10,5 +10,6 @@ This is a concept build for a Google Sites business portfolio for EGCC Business 
 - About Me
   - Table of Contents
   - Mission Statement
-  - Various Reserved Future Slots
+  - Strengths
+  - Previous Work (In progress)
 - Contact Me (Not Built)
