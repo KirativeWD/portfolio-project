@@ -479,6 +479,11 @@ input[type="checkbox"]:checked ~ .str__info:not(.not__me) {
     margin: 4.5rem 0 1rem;
 }
 
+.plans {
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
 .plan,
 .plan__info {
     justify-content: center;
@@ -636,12 +641,12 @@ input[type="checkbox"]:checked ~ .str__info {
     * PREVIOUS WORK */
 
     .slide__cta {
-        max-width: 27.75rem;
-        padding-top:38.125rem;
+        max-width: 22.175rem;
+        padding-top: 31rem;
     }
 
     iframe {
-        max-height: 38.75rem;
+        max-height: 31rem;
     }
 }
 
@@ -707,6 +712,7 @@ input[type="checkbox"]:checked ~ .str__info {
         font-size: 1.75rem;
     }
 
+
 }
 
 /* 1200 PX */
@@ -729,6 +735,14 @@ input[type="checkbox"]:checked ~ .str__info {
 
     .str__info {
         padding: 1.5rem 1.15rem;
+    }
+
+        /* ABOUT ME
+     * PREVIOUS WORKS */
+
+     .plans {
+        flex-wrap: nowrap;
+        gap: 5rem;
     }
 
 }
