@@ -35,6 +35,7 @@ navItems.forEach((item) => {
 const tags = document.querySelectorAll('.tag');
 const fadeSections = document.querySelectorAll('.scrollFade');
 const slideUp = document.querySelectorAll('.slideUp');
+const headerScroll = document.querySelector('header');
 
 // Removes activated animation classes if user JS is enabled
 tags.forEach((tag) => {
@@ -49,6 +50,17 @@ slideUp.forEach((slide) => {
     slide.classList.remove('slideActive');
 });
 
+headerScroll.classList.remove('headerActive');
+
+// When user scrolls, adds background to header
+
+window.addEventListener("scroll", function() {
+    if (window.pageYOffset > 50) {
+      headerScroll.classList.add("headerActive");
+    } else {
+      headerScroll.classList.remove("headerActive");
+    }
+});
 
 // When user scrolls, tag will come into view if in view, hides if out of view
 const tagObserver = new IntersectionObserver(entries => {

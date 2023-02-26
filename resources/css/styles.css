@@ -277,10 +277,15 @@ body {
 header {
     align-items: center;
     justify-content: space-between;
-    position: absolute;
+    position: fixed;
     width: 100%;
     z-index: 99;
     padding-inline: var(--space-100);
+    transition: background-color 0.35s ease;
+}
+
+.headerActive {
+    background:hsl(200, 5%, 12%, 0.7);
 }
 
 .logo {
@@ -305,8 +310,11 @@ header {
     display: inline-block;
     border-width: 2px;
     border-style: solid;
-    border-image: var(--clr-brand-gradient) 2;
     text-decoration: none;
+}
+
+.btn:not(.footer_btn) {
+    border-image: var(--clr-brand-gradient) 2;
 }
 
 .header_resume {
@@ -545,11 +553,9 @@ footer {
 }
 
 footer .btn {
-    border: solid var(--clr-black);
     font-family: var(--ff-title);
     font-size: var(--fs-resume);
     font-weight: var(--fw-bold);
-    text-decoration: none;
     isolation: isolate;
 }
 
@@ -960,6 +966,7 @@ main {
     }
 
     .footer_btn:is(:hover, :focus) {
+        border-color: var(--clr-black);
         color: var(--clr-primary);
     }
 
