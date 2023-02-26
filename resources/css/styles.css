@@ -147,13 +147,17 @@ select {
 /* ====================[3]==================== */
 /* ===== BODY && COMPOSITION ===== */
 
+html,
+body {
+    overflow-x: hidden;
+}
+
 body {
     font-family: var(--ff-paragraph);
     font-weight: var(--fw-regular);
     background-color: var(--clr-black);
     color: var(--clr-white);
     font-size: var(--fs-paragraph);
-    overflow-x: hidden;
 }
 
 .sr-only {
@@ -165,7 +169,6 @@ body {
     white-space: nowrap; 
     width: 1px;
     max-width: 100%;
-    overflow-x: hidden;
 }
 
 .wrapper {
@@ -681,7 +684,6 @@ label:hover {
 main {
     position: relative;
     isolation: isolate;
-    overflow: hidden;
 }
 
 .hex_design {
@@ -728,7 +730,7 @@ main {
 
 .hex_design:nth-of-type(6) {
     bottom: 0;
-    transform: rotate(327deg) translate(2rem, 30rem);
+    transform: rotate(350deg) translate(13rem, 7rem);
 }
 
 
