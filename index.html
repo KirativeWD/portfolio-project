@@ -4,28 +4,217 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="resources/js/index.js" defer></script>
     <link rel="stylesheet" href="resources/css/styles.css">
     <title>Kira Tantari | Portfolio</title>
 </head>
-<body class="fadeIn center-align txt-center home">
-    <main class="grid-cta">
-        <h1 class="fs-xlg clr-accent-green ff-secondary">Hello, World!</h1>
+<body>
+    <header class="flex fadeIn">
         <div>
-            <h2 class="fs-md">I am <span class="clr-accent-green ff-secondary">Kira Tantari</span>.</h2>
-            <p class="fs-md">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <img class="logo" src="resources/images/Logo.svg" alt="Kira Tantari logo">
         </div>
-        <div class="flex-cta btn-cta">
-            <a class="pos-rel btn" href="about.html">
-                About Me
-            </a>
-            <a class="pos-rel btn" href="#0">
-                Contact Me
-            </a>
-        </div>
-        <div class="verse__cta">
-            <p class="fs-sm">"Commit your work to the Lord, and your plans will be established."</p>
-            <p class="fs-sm verse">Proverbs 16:3</p>
-        </div>
+
+        <button class="nav_toggle" aria-controls="primary_nav" aria-expanded="false">
+            <span class="sr-only">Menu</span>
+            <svg class="hamburger" width="40" height="34" viewBox="0 0 40 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect class="line top" width="40" height="6" fill="#65C9A5"/>
+                <rect class="line middle" y="14" width="40" height="6" fill="#65C9A5"/>
+                <rect class="line bottom" y="28" width="40" height="6" fill="#65C9A5"/>
+            </svg>
+        </button>
+
+        <nav class="flex">
+            <ul id="primary_nav" data-visible="false" class="flex primary_nav">
+                <li>
+                    <a href="#about" class="clr-brand-white nav-item">About Me</a>
+                </li>
+                <li>
+                    <a href="#mission" class="clr-brand-white nav-item">Mission Statement</a>
+                </li>
+                <li>
+                    <a href="#strengths" class="clr-brand-white nav-item">Strengths</a>
+                </li>
+                <li>
+                    <a href="#work" class="clr-brand-white nav-item">Work Examples</a>
+                </li>
+                <li class="mobile">
+                    <a href="https://drive.google.com/file/d/10H4sHLv9oAeYkgeIZy62MOpCHQEsfwL3/view?usp=sharing" class="clr-brand-primary header_resume btn" target="_blank">Resume</a>
+                </li>
+            </ul>
+        </nav>
+        <a href="https://drive.google.com/file/d/10H4sHLv9oAeYkgeIZy62MOpCHQEsfwL3/view?usp=sharing" class="clr-brand-primary desktop resume header_resume btn" target="_blank">Resume</a>
+    </header>
+    <main class="grid wrapper">
+
+        <!-- HERO -->
+
+        <section class="hero fullscreen fadeIn">
+            <div class="filter"></div>
+            <div class="jumbo flex">
+                <div>
+                    <p class="brand-font-h3">Hi, my name is</p>
+                    <h1 class="brand-font-h1">Kira Tantari.</h1>
+                </div>
+                <div>
+                    <p class="verse">"Commit your work to the Lord, and your plans will be established."</p>
+                    <p>Proverbs 16:3</p>
+                </div>
+                <a href="https://drive.google.com/file/d/10H4sHLv9oAeYkgeIZy62MOpCHQEsfwL3/view?usp=sharing" class="clr-brand-primary resume hero_resume btn" target="_blank">Resume</a>
+            </div>
+        </section>
+
+        <!-- ABOUT ME -->
+
+        <section class="scrollFade fadeActive">
+            <h2 id="about" class="brand-font-h3 tag clr-brand-black bg-brand-gradient">About Me</h2>
+            <div class="side-margins about_me flex">
+                <img class="self" src="resources/images/Self.png" alt="Kira Tantari">
+                <div>
+                    <p class="justify">There is something about getting things “just right” that keeps me going. Whether it's a perfectly crafted sentence or a meticulously planned project, I thrive on the satisfaction of knowing that I've given my all for my achievements.</p>
+                    <p class="justify">As an investigative learner, I find myself constantly seeking new knowledge and insights, always curious about how things work and how I can improve my skills. Whether it's tinkering with websites, experimenting in the kitchen, or attempting a new language for the fiftieth time, I am always up for a challenge. I believe that life is about constantly growing and pushing yourself, and I try to live by that every day.</p>
+                    <p class="justify">In my free time, I enjoy designing and building websites, going on outdoor adventures, and spending time with friends and family. Life is about balance and it is important to make time for the things that truly matter. I am also extremely passionate about Jesus. If you find me randomly breaking out into song, don't mind me—I'm only praising the goodness of God.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MISSION STATEMENT -->
+
+        <section class="scrollFade fadeActive mission_cta">
+            <div class="container" aria-hidden="true">
+                <p class="brand-font-h1 caps clr-brand-primary">integrity</p>
+                <p class="brand-font-h1 caps clr-brand-primary">compassion</p>
+                <p class="brand-font-h1 caps clr-brand-primary">excellence</p>
+            </div>
+            <h2 id="mission" class="brand-font-h3 tag clr-brand-black bg-brand-gradient">Mission Statement</h2>
+            <div class="side-margins mission">
+                <div >
+                    <p class="brand-font-h2">Love <span class="caps clr-brand-primary">God.</span></p>
+                    <p class="brand-font-h2">Love <span class="caps clr-brand-primary">People.</span></p>
+                </div>
+                <p class="justify">Jesus says in Matthew 22:37-39 that to love God is the first and greatest commandment and that the second is to love your neighbor as yourself. “Love God. Love People.” is my commitment to live every aspect of my life—both personal and professional—with integrity, compassion, and excellence.</p>
+            </div>
+        </section>
+
+        <!-- STRENGTHS -->
+
+        <section class="scrollFade fadeActive">
+            <h2 id="strengths" class="brand-font-h3 tag clr-brand-black bg-brand-gradient">Strengths</h2>
+            <div class="side-margins strengths">
+                <h3 class="brand-font-h2">From <a href="" class="clr-brand-primary"><span class="caps">high</span>5 Strengths Test</a></h3>
+                <p>Understanding and leveraging one's personal strengths in the workplace  can lead to greater job satisfaction, improved performance, and more successful outcomes for both the individual and the organization. By focusing on their strengths individuals are able to work and contribute more effectively and efficiently to the success of their team and the company as a whole.</p>
+                <ol class="accordions flex">
+                    <li class="bg-brand-gradient slideUp slideActive">
+                        <input type="checkbox" class="sr-only str_toggle" id="optimist" aria-controls="optimist_info" aria-expanded="false">
+                        <label for="optimist" class="caps clr-brand-black">Optimist</label>
+                        <div id="optimist_info" class="str_info" aria-hidden="true">
+                            <p> In a team environment, optimists are grateful for people and circumstances, generous with praise and quick to point out the positive side of every situation. This is key to motivating people and mitigating conflicts.</p>
+                            <p>Well-suited for:</p>
+                            <ul>
+                                <li>Leading a team</li>
+                                <li>Sales</li>
+                                <li>Project management</li>
+                                <li>Marketing</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="bg-brand-gradient slideUp slideActive">
+                        <input type="checkbox" class="sr-only str_toggle" id="empathizer">
+                        <label for="empathizer" class="caps clr-brand-black">Empathizer</label>
+                        <div class="str_info" aria-hidden="true">
+                            <p>When part of a team, this strength based on kindness is valuable for mitigating conflict. Empathisers use it to ensure that everyone takes the others' challenges and emotions into consideration.</p>
+                            <p>Well-suited for:</p>
+                            <ul>
+                                <li>Human resources</li>
+                                <li>Team management</li>
+                                <li>Sales</li>
+                                <li>Mediation</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="bg-brand-gradient slideUp slideActive">
+                        <input type="checkbox" class="sr-only str_toggle" id="believer">
+                        <label for="believer" class="caps clr-brand-black">Believer</label>
+                        <div class="str_info" aria-hidden="true">
+                            <p>Believers' actions are driven by core values that cannot be compromised at the expense of success, and team members respect their integrity, consistency, and reliability.</p>
+                            <p>Well-suited for:</p>
+                            <ul>
+                                <li>Human resources</li>
+                                <li>Public relations</li>
+                                <li>Ethical compliance</li>
+                                <li>Quality control</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="bg-brand-gradient slideUp slideActive">
+                        <input type="checkbox" class="sr-only str_toggle" id="thinker">
+                        <label for="thinker" class="caps clr-brand-black">Thinker</label>
+                        <div class="str_info" aria-hidden="true">
+                            <p>Thinker's digest complex information and ideas before communicating them with the outside world. They can simplify sophisticated concepts in a way that even children can understand.</p>
+                            <p>Well-suited for:</p>
+                            <ul>
+                                <li>Market research</li>
+                                <li>Strategy</li>
+                                <li>Product development</li>
+                                <li>Leading a team</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="bg-brand-gradient slideUp slideActive">
+                        <input type="checkbox" class="sr-only str_toggle" id="peacekeeper">
+                        <label for="peacekeeper" class="caps clr-brand-black">Peacekeeper</label>
+                        <div class="str_info" aria-hidden="true">
+                            <p>Peacekeeper's are masters of balance. Their strength helps them find alignment and build bridges among people to reach the best outcomes.</p>
+                            <p>Well-suited for:</p>
+                            <ul>
+                                <li>Human resources</li>
+                                <li>Leading a team</li>
+                                <li>Public relations</li>
+                                <li>Conflict resolution</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- PREVIOUS WORK -->
+
+        <section class="scrollFade fadeActive">
+            <h2 id="work" class="brand-font-h3 tag bg-brand-gradient clr-brand-black">Previous Work</h2>
+            <div class="side-margins work flex">
+                <h3 class="brand-font-h2">What I've Done</h3>
+                <div class="work_examples flex">
+                    <div class="work_example flex">
+                        <a class="clr-brand-primary work_btn btn" href="https://docs.google.com/viewer?url=https://docs.google.com/presentation/d/139qfBtpn2MDGZLk9ghXWi_7v1tUmdNVp-KZDfDJrz38/export?format=pdf" target="_blank">Business<span> Plan</span></a>
+                        <p class="brand-font-h4">Created 2021</p>
+                        <p class="justify">The purpose of this assignment was to create a hypothetical business plan for an existing company on the NASDAQ—or of our own creation. As a gaming fan and user of the company's products, I chose NVIDIA to build this project around. The plan was broken into four parts, all building on top of each other until the final project was due. The information within this business plan was procurred directly from NVIDIA's 10-K and Corporate Financial Responsibility reports, and their use is strictly theoretical.</p>
+                    </div>
+                    <div class="work_example flex">
+                        <a class="clr-brand-primary work_btn btn" href="https://docs.google.com/viewer?url=https://docs.google.com/presentation/d/14BkJD06UeADzPgiT0yt3x9ENtWQauezLLm-_AqRcDaQ/export?format=pdf" target="_blank">Marketing<span> Plan</span></a>
+                        <p class="brand-font-h4">Created 2022</p>
+                        <p class="justify">The purpose of this assignment was to create a hypothetical marketing plan for an existing company using the template provided. As a fan of their social media marketing, I chose Wendy's. Similar to the business plan, the markting plan was broken into four parts, all building on top of each other until the final project was due. The information within this marketing plan was procurred from multiple sources including Wendy's 10-K and Corporate Social Responsibility reports, Segmanta, the U.S. Bureau of Labor Statistics, and the U.S. Census Bureau. The use of the information gathered is strictly theoretical.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <img class="hex_design" src="resources/images/hex_design.svg" alt="" aria-hidden="true">
+        <img class="hex_design" src="resources/images/hex_design.svg" alt="" aria-hidden="true">
+        <img class="hex_design" src="resources/images/hex_design.svg" alt="" aria-hidden="true">
+        <img class="hex_design" src="resources/images/hex_design.svg" alt="" aria-hidden="true">
+        <img class="hex_design" src="resources/images/hex_design.svg" alt="" aria-hidden="true">
+        <img class="hex_design" src="resources/images/hex_design.svg" alt="" aria-hidden="true">
+
+
     </main>
+    <footer class="flex">
+        <a href="https://drive.google.com/file/d/10H4sHLv9oAeYkgeIZy62MOpCHQEsfwL3/view?usp=sharing" class="clr-brand-black footer_btn header_resume btn" target="_blank">Resume</a>
+        <div class="copyright flex">
+            <div>
+                <img src="resources/images/Logo2.svg" alt="Kira Tantari logo">
+            </div>
+            <p class="clr-brand-black">© Kira Tantari. 2023</p>
+        </div>
+    </footer> 
 </body>
 </html>
