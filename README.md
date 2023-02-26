@@ -2,14 +2,11 @@
 
 This is a concept build for a Google Sites business portfolio for EGCC Business Management Capstone
 
-## Current Build
+## Current Build Finished
 
 - Homepage
-  - About Me Button (linked)
-  - Contact Me Button (no link; not built)
-- About Me
-  - Table of Contents
+  - Hero
+  - About Me
   - Mission Statement
   - Strengths
   - Previous Work
-- Contact Me (Not Built)
