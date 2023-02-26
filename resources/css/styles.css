@@ -147,17 +147,13 @@ select {
 /* ====================[3]==================== */
 /* ===== BODY && COMPOSITION ===== */
 
-html,
-body {
-    overflow-x: hidden;
-}
-
 body {
     font-family: var(--ff-paragraph);
     font-weight: var(--fw-regular);
     background-color: var(--clr-black);
     color: var(--clr-white);
     font-size: var(--fs-paragraph);
+    overflow-x: hidden;
 }
 
 .sr-only {
@@ -641,62 +637,6 @@ label:hover {
 /* ====================[13]==================== */
 /* ===== DECORATIVE CONTENT ===== */
 
-/* HEX DESIGNS */
-
-main {
-    position: relative;
-    isolation: isolate;
-}
-
-.hex_design {
-    position: absolute;
-    z-index: -1;
-    opacity: 0.1;
-    max-width: fit-content;
-    transform-origin: center;
-}
-
-.hex_design:nth-of-type(1),
-.hex_design:nth-of-type(3),
-.hex_design:nth-of-type(5) {
-    left: 0;
-}
-
-.hex_design:nth-of-type(2),
-.hex_design:nth-of-type(4),
-.hex_design:nth-of-type(6) {
-    right: 0;
-}
-
-
-.hex_design:nth-of-type(1) {
-    transform: translate(-12rem, 74rem) rotate(159deg);
-}
-
-.hex_design:nth-of-type(2) {
-    transform: translate(13rem, 117rem) rotate(354deg);
-}
-
-.hex_design:nth-of-type(3) {
-    transform: translate(-12rem, 208rem) rotate(148deg);
-}
-
-.hex_design:nth-of-type(4) {
-    transform: translate(10rem, 289rem) rotate(311deg);
-}
-
-.hex_design:nth-of-type(5) {
-    bottom: 0;
-    transform: rotate(178deg) translate(7rem, 42rem);
-}
-
-.hex_design:nth-of-type(6) {
-    bottom: 0;
-    transform: rotate(350deg) translate(13rem, 4rem);
-}
-
-
-/* MISSION DECORATIVE */
 .mission_cta {
     position: relative;
     isolation: isolate;
@@ -849,21 +789,6 @@ main {
 
     .tag {
         padding: 0.5rem 4rem 0.5rem var(--space-250);
-    }
-
-    .hex_design:nth-of-type(3) {
-        top: 50%;
-        transform: translate(-12rem, -3rem) rotate(148deg);
-    }
-    
-    .hex_design:nth-of-type(4) {
-        top: 50%;
-        transform: translate(10rem, 55rem) rotate(311deg);
-    }
-    
-    .hex_design:nth-of-type(5) {
-        top: 75%;
-        transform: rotate(178deg) translate(7rem, -11rem);
     }
 
     footer {
