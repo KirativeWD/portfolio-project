@@ -731,10 +731,12 @@ label:hover {
     
     button[aria-expanded="true"] .top {
         transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
     }
     
     button[aria-expanded="true"] .bottom {
         transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
     }
     
     button[aria-expanded="true"] .middle {
