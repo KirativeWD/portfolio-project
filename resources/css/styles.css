@@ -167,8 +167,8 @@ body {
     max-width: 100%;
 }
 
-.wrapper {
-    gap: 6rem;
+main section:not(.hero) {
+    padding-block: 6rem;
 }
 
 .desktop {
@@ -405,7 +405,7 @@ h2.brand-font-h3 {
 /* ====================[8]==================== */
 /* ===== MISSION STATEMENT ===== */
 
-.mission p:first-of-type {
+.mission p.brand-font-h2:nth-of-type(1) {
     margin-bottom: -1rem;
 }
 
@@ -514,6 +514,7 @@ label::after {
 .work_examples {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
     gap: var(--space-150);
 }
@@ -521,8 +522,9 @@ label::after {
 .work_example {
     text-align: center;
     flex-direction: column;
+    flex: 1 1 0;
     gap: var(--space-150);
-    max-width: 40em;
+    max-width: 36em;
 }
 
 .work_btn {
@@ -626,7 +628,7 @@ label:hover {
 }
 
 .slideUp {
-    transform: translateY(200%);
+    transform: translateY(20rem);
     transition: transform 400ms ease;
 }
 
@@ -639,33 +641,29 @@ label:hover {
 
 .mission_cta {
     position: relative;
-    isolation: isolate;
+    overflow: hidden;
 }
 
-.container {
-    display: none;
+.decorative {
     position: absolute;
-    transform: translateY(5rem);
+    font-size: 15rem;
     z-index: -1;
-    height: 100%;
-    width: 100%;
-    align-content: end;
-    opacity: 0.2;
-    gap: var(--space-250);
+    right: 0;
+    opacity: 0.03;
+    display: none;
 }
 
-.container p {
-    font-size: 6rem;
-    text-align: center;
+.decorative:nth-of-type(2) {
+    height: 27%;
+    margin-block: auto;
+    inset: 0;
 }
 
-.container p:nth-of-type(1) {
-    transform: translateX(-20%);
+.decorative:nth-of-type(3) {
+    bottom: 0;
+    line-height: 1;
 }
 
-.container p:nth-of-type(3) {
-    transform: translateX(20%);
-}
 
 /* ====================[14]==================== */
 /* ===== MEDIA QUERIES ===== */
@@ -817,7 +815,7 @@ label:hover {
         --fs-work: 2rem;
     }
 
-    .wrapper {
+    main section:not(.hero) {
         gap: 16rem;
     }
     
@@ -850,8 +848,8 @@ label:hover {
         margin-bottom: 3.5rem;
     }
 
-    .container {
-        display: grid;
+    .decorative {
+        display: block;
     }
 
     .work_examples {
@@ -932,13 +930,5 @@ label:hover {
 
 /* 1440 PX */
 @media (min-width: 90em) {
-
-    .container {
-        transform: translateY(10rem);
-    }
-    
-    .container p {
-        font-size: 8rem;
-    }
 }
 
