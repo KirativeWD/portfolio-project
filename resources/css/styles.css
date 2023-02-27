@@ -582,7 +582,7 @@ footer {
 /* === TAG TRANSITION === */
 
 .tag {
-    transform: translateX(-100%);
+    transform: translateX(-99%);
     transition: transform 700ms ease;
 }
 
@@ -593,7 +593,7 @@ footer {
 /* STRENGTHS INFO TRANSITIONS */
 
 label {
-    transition: background-color 0.35s ease;
+    transition: background-color 0.35s ease-in;
 }
 
 label:hover {

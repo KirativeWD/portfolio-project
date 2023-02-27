@@ -73,24 +73,30 @@ const tagObserver = new IntersectionObserver(entries => {
     });
 });
 
+const fadeOptions = {
+    threshold: .25
+};
+
 // When user scrolls, elements fade in and stay in view
-const fadeObserver = new IntersectionObserver(entries => {
+const fadeObserver = new IntersectionObserver(function(entries, fadeObserver) {
     entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('fadeActive');
-            fadeObserver.unobserve(entry.target);
+        if (!entry.isIntersecting) {
+            return
         };
+        entry.target.classList.add('fadeActive');
+        fadeObserver.unobserve(entry.target);
     });
-});
+}, fadeOptions);
 
 // When user scrolls, strength categories slide into place
 
 const slideObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('slideActive');
-            fadeObserver.unobserve(entry.target);
+        if (!entry.isIntersecting) {
+            return;
         };
+        entry.target.classList.add('slideActive');
+        fadeObserver.unobserve(entry.target);
     });
 });
 
