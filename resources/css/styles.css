@@ -609,11 +609,13 @@ label:hover {
 }
 
 .slideUp {
-    transform: translateY(20rem);
-    transition: transform 400ms ease;
+    transform: translateY(10rem);
+    opacity: 0;
+    transition: opacity 500ms ease, transform 400ms ease;
 }
 
 .slideActive {
+    opacity: 1;
     transform: translateY(0);
 }
 
@@ -714,7 +716,7 @@ label:hover {
         position: absolute;
         right: 0;
         z-index: 1000;
-        margin-top: 0.5rem;
+        margin-top: var(--space-100);
         margin-right: var(--space-100);
     }
     
@@ -728,11 +730,11 @@ label:hover {
     }
     
     button[aria-expanded="true"] .top {
-        rotate: -45deg;
+        transform: rotate(-45deg);
     }
     
     button[aria-expanded="true"] .bottom {
-        rotate: 45deg;
+        transform: rotate(45deg);
     }
     
     button[aria-expanded="true"] .middle {

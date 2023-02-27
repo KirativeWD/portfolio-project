@@ -74,7 +74,7 @@ const tagObserver = new IntersectionObserver(entries => {
 });
 
 const fadeOptions = {
-    threshold: .25
+    threshold: .1
 };
 
 // When user scrolls, elements fade in and stay in view
